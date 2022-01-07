@@ -8,11 +8,15 @@ const { MongoClient } = require("mongodb");
 exports.db = null;
 
 exports.mongoConnect = async () => {
-  const client = await MongoClient.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
+  try {
+    const client = await MongoClient.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
 
-  exports.db = client.db();
-  return exports.db;
+    exports.db = client.db();
+    return exports.db;
+  } catch (err) {
+    console.log(err);
+  }
 };
