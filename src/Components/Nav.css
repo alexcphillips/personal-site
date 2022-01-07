@@ -1,0 +1,52 @@
+#top-nav {
+  font-size: 30px;
+  background-color: #3b4d63;
+  padding-bottom: 12px;
+  overflow: hidden;
+}
+
+#top-nav a {
+  color: white;
+}
+
+#home {
+  display: inline-block;
+  margin-left: 40px;
+  position: relative;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+#family,
+#combat,
+#about-me {
+  margin-right: 10px;
+  margin-left: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  float: right;
+  position: relative;
+}
+
+#home.active,
+#family.active,
+#combat.active,
+#about-me.active {
+  border-bottom: 2px solid #b3e6f9;
+}
+
+#home:hover,
+#family:hover,
+#combat:hover,
+#about-me:hover {
+  color: #b3e6f9;
+}
+
+a {
+  text-decoration: none;
+  padding: 5px;
+}
+
+.hidden {
+  visibility: hidden;
+}

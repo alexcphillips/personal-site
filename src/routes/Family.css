@@ -1,0 +1,37 @@
+#familyImageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+
+.familyImage {
+  width: 95%;
+  margin-top: 4%;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.familyImage img {
+  max-width: 40%;
+}
+
+.left img {
+  padding-left: 15%;
+  float: left;
+}
+
+.right img {
+  padding-right: 15%;
+  float: right;
+}
+
+.imageText {
+  color: black;
+  width: 35%;
+  margin-left: 3%;
+}
+
+.imageText {
+  font-size: 2.2em;
+  font-family: Arial, Helvetica, sans-serif;
+}
