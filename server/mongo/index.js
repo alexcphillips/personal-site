@@ -14,11 +14,11 @@ exports.mongoConnect = async () => {
   console.log(`~~~ process.env: ${JSON.stringify(process.env)}`);
   console.log(`~~~ attempting to connect to: ${process.env.MONGO_URI}`);
 
-  // const client = await MongoClient.connect(process.env.MONGO_URI, {
-  //   useNewUrlParser: true,
-  //   useUnifiedTopology: true
-  // });
+  const client = await MongoClient.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  });
 
-  // exports.db = client.db();
-  // return exports.db;
+  exports.db = client.db();
+  return exports.db;
 };
