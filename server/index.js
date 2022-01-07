@@ -2,8 +2,6 @@ const mongo = require("./mongo");
 const { app } = require("./app");
 
 (async () => {
-  console.log(`~~~ calling mongoConnect from mongo/index`);
-
   await mongo.mongoConnect();
 
   console.log("mongo connection SUCCESSFUL");
