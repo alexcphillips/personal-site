@@ -8,19 +8,17 @@ const { MongoClient } = require("mongodb");
 exports.db = null;
 
 exports.mongoConnect = async () => {
-  fs.readFile(path.join(__dirname, "../../.env"), (err, data) => {
-    if (err) throw err;
-    console.log("~~~ the .env data:", data.toString());
-  });
+  const file = fs.readFileSync(path.join(__dirname, "../../.env"));
+  console.log("~~~ the .env data:", file.toString());
 
-  console.log(`~~~ attempting to connect to: ${process.env.MONGO_URI}`);
   console.log(`~~~ process.env: ${JSON.stringify(process.env)}`);
+  console.log(`~~~ attempting to connect to: ${process.env.MONGO_URI}`);
 
-  const client = await MongoClient.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-  });
+  // const client = await MongoClient.connect(process.env.MONGO_URI, {
+  //   useNewUrlParser: true,
+  //   useUnifiedTopology: true
+  // });
 
-  exports.db = client.db();
-  return exports.db;
+  // exports.db = client.db();
+  // return exports.db;
 };
