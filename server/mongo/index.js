@@ -1,7 +1,7 @@
 const { MongoClient } = require("mongodb");
 exports.db = null;
 
-exports.mongoConnect = async (uri) => {
+exports.connect = async (uri) => {
   try {
     const client = await MongoClient.connect(uri, {
       useNewUrlParser: true,

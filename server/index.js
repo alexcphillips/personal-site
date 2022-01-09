@@ -7,7 +7,7 @@ envPath =
 require("dotenv").config({ path: path.join(__dirname, envPath) });
 
 (async () => {
-  await mongo.mongoConnect(process.env.MONGO_URI);
+  await mongo.connect(process.env.MONGO_URI);
 
   app.listen(process.env.PORT, () => {
     console.log("Server started SUCCESSFULLY on port", process.env.PORT);
