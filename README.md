@@ -1,5 +1,7 @@
 # personal-site
+working on implementing docker containers
 
+(without docker)
 Installing Git
 sudo yum install git
 
