@@ -1,21 +1,15 @@
-const path = require("path");
-const fs = require("fs");
-envPath =
-  process.env.NODE_ENV === "dev" ? "../../.env.dev" : (envPath = "../../.env");
-require("dotenv").config({ path: path.join(__dirname, envPath) });
-
 const { MongoClient } = require("mongodb");
 exports.db = null;
 
-exports.mongoConnect = async () => {
+exports.connect = async (uri) => {
   try {
-    const client = await MongoClient.connect(process.env.MONGO_URI, {
+    const client = await MongoClient.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     });
 
+    console.log("Mongodb connected SUCCESSFULLY");
     exports.db = client.db();
-    return exports.db;
   } catch (err) {
     console.log(err);
   }
