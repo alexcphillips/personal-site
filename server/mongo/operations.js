@@ -23,3 +23,7 @@ exports.findMany = async (collection, key, val) => {
 exports.insertOne = async (collection, doc) => {
   return await mongo.db.collection(collection).insertOne(doc);
 };
+
+exports.insertMany = async (collection, docs) => {
+  return await mongo.db.collection(collection).insertMany(docs);
+};
