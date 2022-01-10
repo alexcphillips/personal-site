@@ -1,4 +1,12 @@
-const mongo = require("../mongo");
+const mongo = require(".");
+
+exports.findOneAndDelete = async (collection, filter) => {
+  return await mongo.db.collection(collection).findOneAndDelete(filter);
+};
+
+exports.deleteMany = async (collection, filter) => {
+  return await mongo.db.collection(collection).deleteMany(filter);
+};
 
 exports.findOneBy = async (collection, key, val) => {
   const opts = {};
