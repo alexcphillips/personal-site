@@ -14,7 +14,7 @@ exports.findOne = async (collection, key, val, project = {}) => {
   return await mongo.db.collection(collection).findOne(opts, project);
 };
 
-exports.findMany = async (collection, key, val, project) => {
+exports.findMany = async (collection, key, val, project = {}) => {
   const opts = {};
   opts[key] = val;
   return await mongo.db.collection(collection).find(opts, project);
