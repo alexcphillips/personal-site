@@ -6,7 +6,7 @@ export default function FamilyImage() {
   const [images, updateImages] = useState([]);
 
   async function getImages(isMounted) {
-    const res = await axios.get("/familyImagesInfo");
+    const res = await axios.get("http://localhost:3001/familyImagesInfo");
 
     if (isMounted) {
       updateImages(res.data);

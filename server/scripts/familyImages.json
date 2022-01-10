@@ -3,21 +3,21 @@
     "name": "IsaacHorsePrep2.jpeg",
     "page": "family",
     "position": "right",
-    "containerColor": "#CFEFF7",
-    "text": "Isaac likes horseback riding!"
+    "containerColor": "#B2D6DB",
+    "text": "This is my brother Isaac."
   },
   {
     "name": "IsaacHorseX7Trot.jpeg",
     "page": "family",
     "position": "right",
-    "containerColor": "#92ABC9",
-    "text": "He's pretty good at it too! I'll have to give it a try one day."
+    "containerColor": "#9FCCDB",
+    "text": "Isaac likes horseback riding!"
   },
   {
     "name": "IsaacHorseX3Balance.jpeg",
     "page": "family",
     "position": "right",
-    "containerColor": "#98C6E0",
-    "text": "This is my brother Isaac."
+    "containerColor": "#94C1D8",
+    "text": "He's pretty good at it too! I'll have to give it a try one day."
   }
 ]
