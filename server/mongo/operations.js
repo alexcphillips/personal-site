@@ -8,13 +8,13 @@ exports.deleteMany = async (collection, filter) => {
   return await mongo.db.collection(collection).deleteMany(filter);
 };
 
-exports.findOneBy = async (collection, key, val) => {
+exports.findOne = async (collection, key, val) => {
   const opts = {};
   opts[key] = val;
   return await mongo.db.collection(collection).findOne(opts);
 };
 
-exports.findManyBy = async (collection, key, val) => {
+exports.findMany = async (collection, key, val) => {
   const opts = {};
   opts[key] = val;
   return await mongo.db.collection(collection).find(opts);
