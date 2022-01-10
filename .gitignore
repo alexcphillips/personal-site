@@ -9,3 +9,7 @@
 .env
 
 /data/*
+
+# aws keys
+*.cer
+*.pem
