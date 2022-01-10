@@ -4,7 +4,7 @@
     "page": "family",
     "position": "right",
     "containerColor": "#B2D6DB",
-    "text": "This is my brother Isaac.",
+    "text": "This is my brother Isaac with his best friend Tyke.",
     "order": 1
   },
   {
@@ -12,7 +12,7 @@
     "page": "family",
     "position": "right",
     "containerColor": "#9FCCDB",
-    "text": "Isaac likes horseback riding!",
+    "text": "Isaac loves spending time with Tyke!",
     "order": 2
   },
   {
@@ -20,7 +20,7 @@
     "page": "family",
     "position": "right",
     "containerColor": "#94C1D8",
-    "text": "He's pretty good at it too! I'll have to give it a try one day.",
+    "text": "He's pretty good with horses! I'll have to try one day.",
     "order": 3
   }
 ]
