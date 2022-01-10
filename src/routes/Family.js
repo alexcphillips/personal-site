@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./Family.css";
 
+const connectionStr = (process.env.NODE_ENV = "dev"
+  ? "http://localhost:3001"
+  : "");
 export default function FamilyImage() {
   const [images, updateImages] = useState([]);
 
   async function getImages(isMounted) {
-    const res = await axios.get("http://localhost:3001/familyImagesInfo");
+    const res = await axios.get(`${connectionStr}/familyImagesInfo`);
 
     if (isMounted) {
       updateImages(res.data);
