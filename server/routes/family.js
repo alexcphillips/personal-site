@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const { insertOne } = require("../mongo/mongoOperations");
+const { insertOne } = require("../mongo/operations");
 
 const { validate } = require("./schemas/validate");
 const { familyImageSchema } = require("./schemas/familyImage");
