@@ -19,14 +19,11 @@ exports.findMany = async (collection, query, projection = {}) => {
     projection
   };
 
-  console.log(query);
   const result = await mongo.db
     .collection(collection)
     .find(query, opts)
     .toArray();
-  // const result = await mongo.db.collection("images").find({}).toArray();
 
-  console.log("result:", result);
   return result;
 };
 
