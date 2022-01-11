@@ -14,10 +14,17 @@ exports.findOne = async (collection, key, val, project = {}) => {
   return await mongo.db.collection(collection).findOne(opts, project);
 };
 
-exports.findMany = async (collection, key, val, project = {}) => {
-  const opts = {};
-  opts[key] = val;
-  return await mongo.db.collection(collection).find(opts, project);
+exports.findMany = async (collection, query, projection = {}) => {
+  const opts = {
+    projection
+  };
+
+  const result = await mongo.db
+    .collection(collection)
+    .find(query, opts)
+    .toArray();
+
+  return result;
 };
 
 exports.insertOne = async (collection, doc) => {
