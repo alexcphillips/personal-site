@@ -2,7 +2,8 @@
   font-size: 30px;
   background-color: #3b4d63;
   padding-bottom: 12px;
-  overflow: hidden;
+  position: sticky;
+  top: 0;
 }
 
 #top-nav a {
