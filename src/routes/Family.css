@@ -1,37 +1,46 @@
 #familyImageContainer {
-  display: flex;
-  flex-wrap: wrap;
   background-color: white;
 }
 
 .familyImage {
-  width: 95%;
-  margin-top: 4%;
-  padding-bottom: 40px;
-  padding-top: 40px;
+  padding: 20px;
+  text-align: center;
 }
 
 .familyImage img {
-  max-width: 40%;
+  max-width: 60%;
 }
 
-.left img {
-  padding-left: 15%;
-  float: left;
+#headContainer {
+  min-width: 100%;
+  width: 100%;
 }
 
-.right img {
-  padding-right: 15%;
-  float: right;
+#head {
+  text-align: center;
 }
 
-.imageText {
-  color: black;
-  width: 35%;
-  margin-left: 3%;
+#body {
+  height: 100%;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
-.imageText {
-  font-size: 2.2em;
-  font-family: Arial, Helvetica, sans-serif;
+.bodyText {
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+
+.bodyFoot {
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 5%;
+  text-align: left;
 }
