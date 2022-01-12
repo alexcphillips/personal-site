@@ -1,14 +1,18 @@
-#familyImageContainer {
+#familyContainer {
   background-color: white;
+  height: 100%;
+  width: 60%;
+  margin: auto;
 }
 
 .familyImage {
   padding: 20px;
   text-align: center;
+  min-width: 100%;
 }
 
 .familyImage img {
-  max-width: 60%;
+  max-width: 75%;
 }
 
 #headContainer {
@@ -23,12 +27,7 @@
 #body {
   height: 100%;
   text-align: center;
-  width: 50%;
   margin: auto;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 }
 
 .bodyText {

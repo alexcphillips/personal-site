@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom";
 import "./Nav.css";
 import { isActive } from "../utilities";
+import { useState, useEffect } from "react";
 
 export default function TopNav() {
   return (
-    <nav id="top-nav">
+    <nav id={"top-nav"}>
       <NavLink id="home" className={isActive} to="/">
         Home
       </NavLink>
