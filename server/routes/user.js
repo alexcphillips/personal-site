@@ -31,12 +31,12 @@ exports.delete = async (req, res) => {
   return res.status(200).send(result);
 };
 
-exports.findKeybinds = (req, res) => {
+exports.findKeybinds = async (req, res) => {
   const result = await findOne("users", { _id: req.params.id });
   return res.status(200).send(result);
 };
 
-exports.updateKeybinds = (req, res) => {
+exports.updateKeybinds = async (req, res) => {
   const result = await findOneAndUpdate(
     "users",
     { _id: req.params.id },
