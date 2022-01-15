@@ -8,13 +8,11 @@ exports.deleteMany = async (collection, filter) => {
   return await mongo.db.collection(collection).deleteMany(filter);
 };
 
-exports.findOne = async (collection, key, val, project = {}) => {
-  const opts = {};
-  opts[key] = val;
-  return await mongo.db.collection(collection).findOne(opts, project);
+exports.findOne = async (collection, query = {}, project = {}) => {
+  return await mongo.db.collection(collection).findOne(query, project);
 };
 
-exports.findMany = async (collection, query, projection = {}) => {
+exports.findMany = async (collection, query = {}, projection = {}) => {
   const opts = {
     projection
   };
@@ -33,4 +31,8 @@ exports.insertOne = async (collection, doc) => {
 
 exports.insertMany = async (collection, docs) => {
   return await mongo.db.collection(collection).insertMany(docs);
+};
+
+exports.findOneAndUpdate = async (collection, filter, update) => {
+  return await mongo.db.collection(collection).findOneAndUpdate(filter, update);
 };
