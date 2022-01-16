@@ -5,9 +5,9 @@ const {
   findOneAndDelete
 } = require("../mongo/operations");
 
-const { keybindsSchema } = require("./schemas/keybinds");
-const { userSchema } = require("./schemas/user");
-const { validate } = require("./schemas/validate");
+// const { keybindsSchema } = require("./schemas/keybinds");
+// const { userSchema } = require("./schemas/user");
+// const { validate } = require("./schemas/validate");
 
 exports.find = async (req, res) => {
   const result = await findOne("users", { _id: req.params.id });
@@ -15,13 +15,15 @@ exports.find = async (req, res) => {
 };
 
 exports.insertOne = async (req, res) => {
-  let isValid = validate(req.body, userSchema);
+  // let isValid = validate(req.body, userSchema);
 
-  if (isValid === true) {
-    const result = await insertOne("users", req.body);
-    return res.status(201).send(result);
-  }
-  return res.status(400).send(isValid);
+  // if (isValid === true) {
+  //   const result = await insertOne("users", req.body);
+  //   return res.status(201).send(result);
+  // }
+  // return res.status(400).send(isValid);
+  const result = await insertOne("users", req.body);
+  return res.status(201).send(result);
 };
 
 exports.update = async (req, res) => {
