@@ -12,7 +12,7 @@ exports.findOne = async (collection, query = {}, project = {}) => {
   return await mongo.db.collection(collection).findOne(query, project);
 };
 
-exports.findMany = async (collection, query = {}, projection = {}) => {
+exports.find = async (collection, query = {}, projection = {}) => {
   const opts = {
     projection
   };
