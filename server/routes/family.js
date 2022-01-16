@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const { insertOne } = require("../mongo/operations");
 
-const { validate } = require("./schemas/validate");
-const { familyImageSchema } = require("./schemas/familyImage");
+// const { validate } = require("./schemas/validate");
+// const { familyImageSchema } = require("./schemas/familyImage");
 const mongo = require("../mongo");
 
 exports.find = (req, res) => {
@@ -25,10 +25,12 @@ exports.getInfo = async (req, res) => {
 };
 
 exports.insertOne = async (req, res) => {
-  const validationResult = validate(req.body, familyImageSchema);
-  if (validationResult) {
-    await insertOne("images", req.body);
-    return res.status(201).send();
-  }
-  return res.status(400).send(validationResult);
+  // const validationResult = validate(req.body, familyImageSchema);
+  // if (validationResult) {
+  //   await insertOne("images", req.body);
+  //   return res.status(201).send();
+  // }
+  // return res.status(400).send(validationResult);
+  await insertOne("images", req.body);
+  return res.status(201).send();
 };

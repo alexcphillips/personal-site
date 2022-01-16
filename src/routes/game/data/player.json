@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "isHero": true,
+  "name": "",
+  "inventory": [],
+  "hp": 10,
+  "specialAttack": 0,
+  "defense": 10,
+  "specialDefense": 10,
+  "intelligence": 10,
+  "strength": 1,
+  "dexterity": 1,
+  "spd": 1,
+  "runChance": 50
+}
+git commit -am "adds player json file"

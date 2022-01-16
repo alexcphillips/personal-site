@@ -2,6 +2,7 @@ const router = require("express").Router();
 const family = require("./family");
 const redirect = require("./redirect");
 const user = require("./user");
+const player = require("./game");
 
 router.get("/familyImages", family.find);
 router.get("/familyImagesInfo", family.getInfo);
@@ -14,6 +15,8 @@ router.delete("/user/:id", user.delete);
 
 router.get("/user/keybinds/:id", user.findKeybinds);
 router.put("/user/keybinds/:id", user.updateKeybinds);
+
+router.get("/game/");
 
 router.get("*", redirect.destination);
 
