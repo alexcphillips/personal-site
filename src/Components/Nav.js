@@ -12,9 +12,9 @@ export default function TopNav() {
       <NavLink id="family" className={isActive} to="family">
         family
       </NavLink>{" "}
-      {/* <NavLink id="combat" className={isActive} to="combat">
-        Combat
-      </NavLink>{" "} */}
+      <NavLink id="game" className={isActive} to="game">
+        Game
+      </NavLink>{" "}
       {/* <NavLink id="excel" className={isActive} to="excel">
         Excel
       </NavLink>{" "} */}
