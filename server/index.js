@@ -4,8 +4,13 @@ const path = require("path");
 
 const { seedFamilyImages } = require("./scripts/dbSeed");
 
-envPath =
-  process.env.NODE_ENV === "dev" ? "../.env.dev" : (envPath = "../.env");
+let envPath = null;
+
+if (process.env.NODE_ENV === "dev") {
+  envPath = "../.env.dev";
+} else {
+  envPath = "../.env";
+}
 require("dotenv").config({ path: path.join(__dirname, envPath) });
 
 (async () => {
