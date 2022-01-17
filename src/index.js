@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 // import AboutMe from "./routes/AboutMe";
-import Game from "./routes/game";
+// import Combat from "./routes/Combat";
 // import Excel from "./routes/Excel"
 import Family from "./routes/Family";
 
@@ -17,8 +17,6 @@ render(
           <Route path="combat" element={<Combat />} /> */}
           {/* <Route path="excel" element={<Excel />} /> */}
           <Route path="family" element={<Family />} />
-          <Route path="game" element={<Game />} />
-
           <Route
             path="*"
             element={
