@@ -1,8 +1,7 @@
 const mongo = require(".");
 
 exports.findOneAndDelete = async (collection, filter) => {
-  // return await mongo.db.collection(collection).findOneAndDelete(filter);
-  return await mongo.db.collection("users").findOneAndDelete(filter);
+  return await mongo.db.collection(collection).findOneAndDelete(filter);
 };
 
 exports.deleteMany = async (collection, filter) => {

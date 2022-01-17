@@ -19,7 +19,7 @@
 }
 
 #family,
-#game,
+#combat,
 #about-me {
   margin-right: 10px;
   margin-left: 10px;
@@ -31,14 +31,14 @@
 
 #home.active,
 #family.active,
-#game.active,
+#combat.active,
 #about-me.active {
   border-bottom: 2px solid #b3e6f9;
 }
 
 #home:hover,
 #family:hover,
-#game:hover,
+#combat:hover,
 #about-me:hover {
   color: #b3e6f9;
 }
