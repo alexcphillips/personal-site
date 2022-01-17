@@ -5,13 +5,14 @@ const path = require("path");
 const { seedFamilyImages } = require("./scripts/dbSeed");
 
 let envPath = null;
-
 if (process.env.NODE_ENV === "dev") {
   envPath = "../.env.dev";
 } else {
   envPath = "../.env";
 }
-require("dotenv").config({ path: path.join(__dirname, envPath) });
+
+const pathUsed = path.join(__dirname, envPath);
+require("dotenv").config({ path: pathUsed });
 
 (async () => {
   await mongo.connect(process.env.MONGO_URI);
