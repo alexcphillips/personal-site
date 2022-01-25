@@ -1,0 +1,50 @@
+#page {
+  height: 100%;
+  width: 100%;
+}
+
+#main-container {
+  background-color: white;
+  height: 100%;
+  width: 40%;
+  margin: auto;
+}
+
+#head {
+  text-align: center;
+}
+
+#name {
+  text-align: center;
+  padding-top: 6%;
+}
+
+#body {
+  height: 100%;
+  /* text-align: center; */
+}
+
+.body-text {
+  width: 100%;
+  text-align: left;
+}
+
+.left {
+  text-align: left;
+  justify-content: left;
+}
+
+.section {
+  padding-top: 3%;
+}
+
+#footer {
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+@media screen and (min-width: 401px) and (max-width: 1024px) {
+  #footer {
+    display: none;
+  } /* hide it elsewhere */
+}
