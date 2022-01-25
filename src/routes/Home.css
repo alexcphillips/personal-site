@@ -1,0 +1,21 @@
+#page {
+  height: 100%;
+  width: 100%;
+}
+#main-container {
+  height: 100%;
+  width: 70%;
+}
+
+#greeting {
+  padding-top: 6%;
+  text-align: center;
+  letter-spacing: 0.13em;
+}
+
+#heading {
+  padding-top: 10%;
+  padding-bottom: 2%;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
