@@ -1,26 +1,151 @@
-import { NavLink } from "react-router-dom";
 import "./Nav.css";
-import { isActive } from "../utilities";
-import { useState, useEffect } from "react";
+import axios from "axios";
 
-export default function TopNav() {
+import { Link, useNavigate } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+
+import { useDispatch, useSelector } from "react-redux";
+import { userLogout, userLogin } from "../store/reducers/userSlice";
+
+export default function AppNav() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  if (!user || !user.token) {
+    let userStorage = localStorage.getItem("user");
+
+    if (userStorage) {
+      userStorage = JSON.parse(userStorage);
+      const bearerToken = `Bearer ${userStorage.token}`;
+      axios.defaults.headers.common["authorization"] = bearerToken;
+      dispatch(userLogin(userStorage));
+    }
+  }
+
+  const links = {
+    left: [
+      {
+        linkAttributes: {
+          to: "/"
+        },
+        text: "Alex"
+      },
+      {
+        linkAttributes: {
+          to: "/contact-me"
+        },
+        text: "Contact Me"
+      },
+      {
+        linkAttributes: {
+          to: "/resume"
+        },
+        text: "Resume"
+      }
+      // {
+      //   linkAttributes: {
+      //     to: "/portfolio"
+      //   },
+      //   text: "Portfolio"
+      // }
+
+      // {
+      //   linkAttributes: {}
+      // }
+      // {
+      //   linkAttributes: {
+      //     to: "/family"
+      //   },
+      //   text: "Family"
+      // }
+      // {
+      //   linkAttributes: {
+      //     to: "/game"
+      //   },
+      //   text: "Game"
+      // }
+    ],
+    right: [
+      {
+        hidden: () => user.token,
+
+        linkAttributes: {
+          to: "/login"
+        },
+        text: "Login"
+      },
+      {
+        hidden: () => !user.token,
+
+        itemAttributes: {
+          onClick: async () => {
+            // remove token from axios
+            axios.defaults.headers.common["authorization"] = "";
+            localStorage.removeItem("user");
+
+            // notify backend
+            axios.post("logout", { token: user.token });
+
+            dispatch(userLogout());
+            console.log("dispatched user logout user:", user);
+            // go home
+            navigate("/", { replace: true });
+          }
+        },
+        text: "Logout"
+      }
+    ]
+  };
+
   return (
-    <nav id={"top-nav"}>
-      <NavLink id="home" className={isActive} to="/">
-        Home
-      </NavLink>
-      <NavLink id="family" className={isActive} to="family">
-        family
-      </NavLink>{" "}
-      <NavLink id="game" className={isActive} to="game">
-        Game
-      </NavLink>{" "}
-      {/* <NavLink id="excel" className={isActive} to="excel">
-        Excel
-      </NavLink>{" "} */}
-      <NavLink id="about-me" className={isActive} to="about-me">
-        About
-      </NavLink>
-    </nav>
+    <Navbar
+      className="side-padding-10"
+      collapseOnSelect
+      expand="sm"
+      sticky="top"
+      bg="dark"
+      variant="dark"
+    >
+      {/* <Link className="navbar-brand" id="no-margins" to="/">
+        Alex
+      </Link> */}
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="vertical-center">
+          {links.left.map(
+            ({ hidden, itemAttributes, linkAttributes, text }, i) =>
+              (!hidden || !hidden()) &&
+              ((linkAttributes && (
+                <Link key={i} className="nav-link" {...linkAttributes}>
+                  {text + "  "}
+                </Link>
+              )) ||
+                (itemAttributes && (
+                  <div key={i} {...itemAttributes}>
+                    {text + "  "}
+                  </div>
+                )))
+          )}
+        </Nav>
+
+        <Nav className="ms-auto vertical-center">
+          {links.right.map(
+            ({ hidden, itemAttributes, linkAttributes, text }, i) =>
+              (!hidden || !hidden()) &&
+              ((linkAttributes && (
+                <Link key={i} className="nav-link" {...linkAttributes}>
+                  {text + "  "}
+                </Link>
+              )) ||
+                (itemAttributes && (
+                  <div className="nav-link" key={i} {...itemAttributes}>
+                    {text + "  "}
+                  </div>
+                )))
+          )}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
