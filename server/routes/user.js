@@ -74,15 +74,25 @@ exports.login = async (req, res) => {
           expiresIn: "2h"
         }
       );
-      user.token = token;
 
-      return res.status(200).json(user);
+      user.token = token;
+      const result = {
+        username,
+        email,
+        token
+      };
+
+      return res.status(200).json(result);
     }
 
     res.status(400).send("Invalid Credentials");
   } catch (err) {
     console.log(error);
   }
+};
+
+exports.logout = async (req, res) => {
+  res.status(200).send();
 };
 
 exports.update = async (req, res) => {
@@ -99,7 +109,7 @@ exports.delete = async (req, res) => {
   const result = await findOneAndDelete("users", {
     _id: ObjectId(req.params.id)
   });
-  console.log(result);
+
   return res.status(200).send(result);
 };
 
