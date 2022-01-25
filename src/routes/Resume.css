@@ -17,6 +17,7 @@
 #name {
   text-align: center;
   padding-top: 6%;
+  letter-spacing: 0.12em;
 }
 
 #body {
@@ -41,10 +42,19 @@
 #footer {
   padding-top: 5%;
   padding-bottom: 5%;
+  text-align: center;
+}
+
+h4 {
+  letter-spacing: 0.12em;
 }
 
 @media screen and (min-width: 401px) and (max-width: 1024px) {
-  #footer {
+  #download-link {
     display: none;
-  } /* hide it elsewhere */
+  }
+
+  #main-container {
+    width: 80%;
+  }
 }

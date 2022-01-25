@@ -15,6 +15,7 @@
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.2",
+    "file-saver": "^2.0.5",
     "handsontable": "^11.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^4.2.2",

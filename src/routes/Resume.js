@@ -1,5 +1,11 @@
 import "./Resume.css";
-import { Link } from "react-router-dom";
+import { saveAs } from "file-saver";
+
+const saveResume = () =>
+  saveAs(
+    "http://localhost:3001/downloads/resume.docx",
+    "AlexPhillipsResume.docx"
+  );
 
 export default function Resume() {
   return (
@@ -7,6 +13,8 @@ export default function Resume() {
       <div id="main-container">
         <h1 id="name">Alexander Phillips</h1>
         <h4 id="head">Node.js Developer</h4>
+        <div style={{ marginBottom: "1rem" }} />
+
         <div id="body">
           <p className="body-text">
             I've been working as a Node.js Developer at ANI Consulting since
@@ -33,7 +41,7 @@ export default function Resume() {
             </ul>
           </div>
 
-          <div className="section left">
+          <div className="section">
             <h4 className="left">SITES</h4>
             <a
               className="left"
@@ -50,6 +58,7 @@ export default function Resume() {
             >
               http://codewars.com/users/alexphillips
             </a>
+            <div style={{ marginBottom: "1rem" }} />
           </div>
 
           <div className="section">
@@ -75,8 +84,8 @@ export default function Resume() {
               </li>
             </ul>
             <div id="footer">
-              <a href="./Alex-Phillips-Resume.docx" target="_blank" download>
-                Download here
+              <a id="download-resume" href="" onClick={saveResume}>
+                Download Word Document
               </a>
             </div>
           </div>

@@ -67,34 +67,30 @@ export default function AppNav() {
       // }
     ],
     right: [
-      {
-        hidden: () => user.token,
-
-        linkAttributes: {
-          to: "/login"
-        },
-        text: "Login"
-      },
-      {
-        hidden: () => !user.token,
-
-        itemAttributes: {
-          onClick: async () => {
-            // remove token from axios
-            axios.defaults.headers.common["authorization"] = "";
-            localStorage.removeItem("user");
-
-            // notify backend
-            axios.post("logout", { token: user.token });
-
-            dispatch(userLogout());
-            console.log("dispatched user logout user:", user);
-            // go home
-            navigate("/", { replace: true });
-          }
-        },
-        text: "Logout"
-      }
+      // {
+      //   hidden: () => user.token,
+      //   linkAttributes: {
+      //     to: "/login"
+      //   },
+      //   text: "Login"
+      // },
+      // {
+      //   hidden: () => !user.token,
+      //   itemAttributes: {
+      //     onClick: async () => {
+      //       // remove token from axios
+      //       axios.defaults.headers.common["authorization"] = "";
+      //       localStorage.removeItem("user");
+      //       // notify backend
+      //       axios.post("logout", { token: user.token });
+      //       dispatch(userLogout());
+      //       console.log("dispatched user logout user:", user);
+      //       // go home
+      //       navigate("/", { replace: true });
+      //     }
+      //   },
+      //   text: "Logout"
+      // }
     ]
   };
 
