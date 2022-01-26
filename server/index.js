@@ -16,7 +16,7 @@ require("dotenv").config({ path: pathUsed });
 
 (async () => {
   await mongo.connect(process.env.MONGO_URI);
-  await seedFamilyImages();
+  // await seedFamilyImages();
 
   app.listen(process.env.PORT, () => {
     console.log("Server started SUCCESSFULLY on port", process.env.PORT);
