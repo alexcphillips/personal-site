@@ -1,0 +1,40 @@
+#page {
+  height: 100%;
+  width: 100%;
+}
+
+#spacer-small {
+  margin-bottom: 5%;
+}
+
+#main-container {
+  height: 100%;
+  width: 70%;
+  text-align: center;
+}
+
+#heading {
+  padding-top: 10%;
+  padding-bottom: 2%;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+#phone-number-and-email {
+  letter-spacing: 0.06em;
+  padding-bottom: 8%;
+}
+
+#links {
+  letter-spacing: 0.06em;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  #main-container {
+    width: 90%;
+  }
+
+  #footer {
+    padding-bottom: 15%;
+  }
+}

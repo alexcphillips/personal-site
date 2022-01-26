@@ -5,7 +5,7 @@ import "./index.css";
 
 import Home from "./routes/Home";
 import Nav from "./Components/Nav";
-import AboutMe from "./routes/AboutMe";
+import Contact from "./routes/Contact";
 // import Excel from "./routes/Excel"
 // import Family from "./routes/Family";
 import Login from "./routes/Login";
@@ -24,7 +24,7 @@ render(
 
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="about-me" element={<AboutMe />} /> */}
+          <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
           {/* <Route path="excel" element={<Excel />} /> */}
           {/* <Route path="family" element={<Family />} /> */}
