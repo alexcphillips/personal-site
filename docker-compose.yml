@@ -1,6 +1,8 @@
 version: "3"
 services:
   site:
+    environment:
+      - NODE_ENV=production
     container_name: site
     image: site
     restart: always
