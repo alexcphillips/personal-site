@@ -5,6 +5,7 @@ export default function Contact() {
   return (
     <div className="page">
       <div className="main-container">
+        <div className="spacer-medium" />
         <div className="heading text-center">Contact me</div>
         <p style={{ textAlign: "center" }} id="phone-number-and-email">
           Phone number: 1 (469) 715-7991
