@@ -1,41 +1,42 @@
-#spacer-small {
+.spacer-small {
   margin-bottom: 5%;
 }
 
-#page {
+.page {
   height: 100%;
   width: 100%;
 }
 
-#main-container {
+.main-container {
   height: 100%;
   width: 70%;
+  margin: auto;
 }
 
-#heading {
+.heading {
   padding-top: 10%;
   padding-bottom: 2%;
   letter-spacing: 0.1em;
 }
 
-#text-center {
+.text-center {
   text-align: center;
 }
 
-#text-left {
+.text-left {
   text-align: center;
 }
 
 @media screen and (min-width: 0px) and (max-width: 1024px) {
-  #download-link {
+  .download-link {
     display: none;
   }
 
-  #main-container {
+  .main-container {
     width: 90%;
   }
 
-  #footer {
+  .footer {
     padding-bottom: 15%;
   }
 }
