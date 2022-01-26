@@ -49,7 +49,7 @@ h4 {
   letter-spacing: 0.12em;
 }
 
-@media screen and (min-width: 401px) and (max-width: 1024px) {
+@media screen and (min-width: 0px) and (max-width: 1024px) {
   #download-link {
     display: none;
   }
