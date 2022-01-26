@@ -16,11 +16,13 @@ export default function Home() {
         <p className="body-text">
           My current project is an Excel file processing application I built in
           microservices. The microservices included Express REST APIs and data
-          processing systems. Users stream Excel files through the React
-          frontend to the file processing API. The API stores the Excel file in
-          an AWS S3 Bucket using AWS-SDK. The data processing service converts
-          the Excel file data into JSON for storage and retrieval with MongoDB.
-          The services cache and communicate using Redis.
+          processing systems.
+          <br />
+          Users stream Excel files through the React frontend to the file
+          processing API. The API stores the Excel file in an AWS S3 Bucket
+          using AWS-SDK. The data processing service converts the Excel file
+          data into JSON for storage and retrieval with MongoDB. The services
+          cache and communicate using Redis.
         </p>
         <br />
         <p className="body-text">
