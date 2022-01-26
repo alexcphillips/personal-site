@@ -31,12 +31,12 @@ export default function AppNav() {
         },
         text: "Alex"
       },
-      {
-        linkAttributes: {
-          to: "/contact-me"
-        },
-        text: "Contact Me"
-      },
+      // {
+      //   linkAttributes: {
+      //     to: "/contact-me"
+      //   },
+      //   text: "Contact Me"
+      // },
       {
         linkAttributes: {
           to: "/resume"
