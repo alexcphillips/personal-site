@@ -8,6 +8,7 @@ export default function Home() {
     <Container>
       <div className="page">
         <div className="main-container">
+          <div className="spacer-medium" />
           <h3 id="greeting">Hi, I'm Alex</h3>
           <div className="spacer-small" />
           <h6 className="heading text-center">I'm a Node.js Developer.</h6>
