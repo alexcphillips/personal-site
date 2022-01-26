@@ -1,12 +1,16 @@
-.spacer-tiny {
+.miniscule-spacer {
+  margin-bottom: 1%;
+}
+
+.tiny-spacer {
   margin-bottom: 2%;
 }
 
-.spacer-small {
+.small-spacer {
   margin-bottom: 4%;
 }
 
-.spacer-medium {
+.medium-spacer {
   margin-bottom: 8%;
 }
 
