@@ -48,6 +48,12 @@ export default function AppNav() {
           to: "/resume"
         },
         text: "Resume"
+      },
+      {
+        linkAttributes: {
+          to: "/writings"
+        },
+        text: "Writings"
       }
       // {
       //   linkAttributes: {

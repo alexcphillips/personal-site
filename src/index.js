@@ -6,9 +6,10 @@ import "./index.css";
 import Home from "./routes/Home";
 import Nav from "./Components/Nav";
 import Contact from "./routes/Contact";
+import Writings from "./routes/Writings";
 // import Excel from "./routes/Excel"
 // import Family from "./routes/Family";
-import Login from "./routes/Login";
+// import Login from "./routes/Login";
 // import Game from "./routes/game/Game";
 import Resume from "./routes/Resume";
 
@@ -26,6 +27,8 @@ render(
           <Route path="/" element={<Home />} />
           <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
+          <Route path="writings" element={<Writings />} />
+
           {/* <Route path="excel" element={<Excel />} /> */}
           {/* <Route path="family" element={<Family />} /> */}
           {/* <Route path="game" element={<Game />} /> */}
