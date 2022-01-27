@@ -26,10 +26,11 @@ render(
           <Route path="/" element={<Home />} />
           <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
+
           {/* <Route path="excel" element={<Excel />} /> */}
           {/* <Route path="family" element={<Family />} /> */}
           {/* <Route path="game" element={<Game />} /> */}
-          <Route path="login" element={<Login />} />
+          {/* <Route path="login" element={<Login />} /> */}
           <Route
             path="*"
             element={
