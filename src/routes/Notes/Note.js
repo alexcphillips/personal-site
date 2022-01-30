@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 
 import articles from "../../Components/notes";
 
-export default function Article() {
+export default function Note() {
   const { name } = useParams();
 
   const map = {
