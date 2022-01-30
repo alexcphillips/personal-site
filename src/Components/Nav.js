@@ -51,9 +51,9 @@ export default function AppNav() {
       },
       {
         linkAttributes: {
-          to: "/writings"
+          to: "/notes"
         },
-        text: "Writings"
+        text: "Notes"
       }
       // {
       //   linkAttributes: {

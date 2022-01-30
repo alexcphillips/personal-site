@@ -6,7 +6,7 @@ import "./index.css";
 import Home from "./routes/Home";
 import Nav from "./Components/Nav";
 import Contact from "./routes/Contact";
-import Notes from "./routes/Notes/Note";
+import Notes from "./routes/Notes/Notes";
 import Note from "./routes/Notes/Note";
 
 // import Excel from "./routes/Excel"
@@ -29,7 +29,7 @@ render(
           <Route path="/" element={<Home />} />
           <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
-          <Route path="writings" element={<Notes />}>
+          <Route path="notes" element={<Notes />}>
             <Route path=":name" element={<Note />} />
           </Route>
 

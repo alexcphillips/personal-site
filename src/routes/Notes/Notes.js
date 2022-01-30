@@ -1,5 +1,5 @@
 import "../../common.css";
-import "./Writings.css";
+import "./Notes.css";
 
 import Side from "../../Components/Side";
 import { Col, Container, Row } from "react-bootstrap";
