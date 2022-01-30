@@ -6,7 +6,9 @@ import "./index.css";
 import Home from "./routes/Home";
 import Nav from "./Components/Nav";
 import Contact from "./routes/Contact";
-import Writings from "./routes/Writings";
+import Notes from "./routes/Notes/Article";
+import Article from "./routes/Notes/Article";
+
 // import Excel from "./routes/Excel"
 // import Family from "./routes/Family";
 // import Login from "./routes/Login";
@@ -27,7 +29,9 @@ render(
           <Route path="/" element={<Home />} />
           <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
-          <Route path="writings" element={<Writings />} />
+          <Route path="writings" element={<Notes />}>
+            <Route path=":name" element={<Article />} />
+          </Route>
 
           {/* <Route path="excel" element={<Excel />} /> */}
           {/* <Route path="family" element={<Family />} /> */}
