@@ -4,7 +4,7 @@ import "./notes.css";
 const sshEc2 = (
   <>
     <div className="small-spacer" />
-    <div className="title">SSH into an AWS EC2</div>
+    <div className="title">SSH into an AWS EC2 Instance</div>
     This guide assumes you have already launched an EC2 Instance and have it's
     keys. If not, see my guide on{" "}
     <a href="launching-an-aws-ec2-instance" target="_blank">
