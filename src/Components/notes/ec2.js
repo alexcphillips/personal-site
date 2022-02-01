@@ -4,7 +4,7 @@ import "./notes.css";
 const ec2 = (
   <>
     <div className="small-spacer" />
-    <div className="title">Launching an AWS Ec2 instance</div>
+    <div className="title">Launching an AWS EC2 instance</div>
     AWS Login:{" "}
     <a
       href="https://console.aws.amazon.com/billing/home?#preferences"
