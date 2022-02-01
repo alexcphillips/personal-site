@@ -5,4 +5,5 @@ let notes = {
   "launching-an-aws-ec2-instance": Ec2,
   "ssh-into-an-aws-ec2-instance": sshEc2
 };
+
 export default notes;
