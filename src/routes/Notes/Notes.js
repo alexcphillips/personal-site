@@ -1,23 +1,26 @@
 import "../../common.css";
 import "./Notes.css";
 
-import Side from "../../Components/Side";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
+
+import LeftNav from "../../Components/LeftNav";
+import RightNav from "../../Components/RightNav";
 
 export default function Writings() {
   return (
     <>
-      <Container>
-        <Row>
-          <Col xs={3} className="sidebar-wrapper">
-            <Side />
-          </Col>
-          <Col xs={9} className="page-content-wrapper">
-            <Outlet />
-          </Col>
-        </Row>
-      </Container>
+      <Row className="tall">
+        <Col sm={2} xs={2} className="sidebar-wrapper">
+          <LeftNav />
+        </Col>
+        <Col sm={8} xs={8} md={8} lg={8} className="page-content-wrapper">
+          <Outlet />
+        </Col>
+        <Col sm={2} xs={2} className="sidebar-wrapper">
+          <RightNav />
+        </Col>
+      </Row>
     </>
   );
 }

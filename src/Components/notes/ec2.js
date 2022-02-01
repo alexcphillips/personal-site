@@ -1,10 +1,10 @@
 import "../../common.css";
-import "./ec2.css";
+import "./notes.css";
 
 const ec2 = (
   <>
     <div className="small-spacer" />
-    <div id="title">Launching an AWS Ec2 instance</div>
+    <div className="title">Launching an AWS Ec2 instance</div>
     AWS Login:{" "}
     <a
       href="https://console.aws.amazon.com/billing/home?#preferences"
@@ -47,15 +47,17 @@ const ec2 = (
       </a>
     </li>
     <br />
-    It's highly recommended to{" "}
-    <a
-      href="https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Addresses:"
-      target="_blank"
-    >
-      create an Elastic IP
-    </a>{" "}
-    for your instance. You can use the Elastic IP to connect to your instance -
-    even when it's Public DNS changes.
+    <div className="foooter">
+      It's highly recommended to{" "}
+      <a
+        href="https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Addresses:"
+        target="_blank"
+      >
+        create an Elastic IP
+      </a>{" "}
+      for your instance. You can use the Elastic IP to connect to your instance
+      - even when it's Public DNS changes.
+    </div>
   </>
 );
 
