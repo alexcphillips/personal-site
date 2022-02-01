@@ -5,14 +5,12 @@ const sshEc2 = (
   <>
     <div className="small-spacer" />
     <div className="title">SSH into an AWS EC2</div>
-    <li>
-      This guide assumes you have already launched an EC2 Instance and have it's
-      keypair. If not, see my guide on{" "}
-      <a href="launching-an-aws-ec2-instance" target="_blank">
-        Launching an EC2 Instance
-      </a>
-    </li>
-    <div className="spacer-small" />
+    This guide assumes you have already launched an EC2 Instance and have it's
+    keys. If not, see my guide on{" "}
+    <a href="launching-an-aws-ec2-instance" target="_blank">
+      Launching an EC2 Instance
+    </a>
+    <div className="small-spacer" />
     <li>
       Run <code>chmod 400 ./path/to/key</code> on your keys
     </li>
