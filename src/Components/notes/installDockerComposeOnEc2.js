@@ -1,17 +1,9 @@
-import "../../common.css";
-import "./notes.css";
+import component from "./pages/installDockerComposeOnEc2";
 
-const installDockerComposeOnEc2 = (
-  <>
-    <div className="small-spacer" />
-    <div className="title">Installing Docker Compose on an AWS EC2</div>
-    This guide assumes you have already installed Docker on your EC2. If not,
-    see my guide on{" "}
-    <a href="/install-docker-on-ec2">
-      Installing Docker Compose on an EC2 Instance
-    </a>
-    <div className="small-spacer" />
-  </>
-);
+const installDockerComposeOnEc2 = {
+  text: "Installing Docker Compose on EC2",
+  to: "installing-docker-compose-on-ec2",
+  component
+};
 
 export default installDockerComposeOnEc2;

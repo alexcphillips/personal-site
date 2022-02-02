@@ -1,13 +1,14 @@
 import React from "react";
 import { render } from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, IndexRoute } from "react-router-dom";
 import "./index.css";
 
 import Home from "./routes/Home";
-import Nav from "./Components/Nav";
+import Nav from "./Components/navbars/Nav";
 import Contact from "./routes/Contact";
 import Notes from "./routes/Notes/Notes";
 import Note from "./routes/Notes/Note";
+// import NotesHome from "./routes/NotesHome";
 
 // import Excel from "./routes/Excel"
 // import Family from "./routes/Family";
@@ -30,6 +31,8 @@ render(
           <Route path="contact-me" element={<Contact />} />
           <Route path="resume" element={<Resume />} />
           <Route path="notes" element={<Notes />}>
+            <Route index element={<p>hi</p>} />
+
             <Route path=":name" element={<Note />} />
           </Route>
 

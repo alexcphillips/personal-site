@@ -4,8 +4,8 @@ import "./Notes.css";
 import { Col, Row } from "react-bootstrap";
 import { Outlet } from "react-router-dom";
 
-import LeftNav from "../../Components/LeftNav";
-import RightNav from "../../Components/RightNav";
+import LeftNav from "../../Components/navbars/LeftNav";
+import RightNav from "../../Components/navbars/RightNav";
 
 export default function Writings() {
   return (

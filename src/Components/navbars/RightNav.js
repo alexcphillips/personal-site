@@ -1,9 +1,9 @@
-import "../common.css";
+import "../../common.css";
 import "./Side.css";
 
 import { Link } from "react-router-dom";
 
-import relatedLinks from "./relatedLinks";
+import relatedLinks from "../relatedLinks";
 
 export default function RightNav() {
   return (
