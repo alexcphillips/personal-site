@@ -4,10 +4,7 @@ import "./Resume.css";
 import { saveAs } from "file-saver";
 
 const saveResume = () =>
-  saveAs(
-    "http://localhost:3001/downloads/resume.docx",
-    "AlexPhillipsResume.docx"
-  );
+  saveAs("http://localhost:3001/downloads/resume.docx", "Alex Phillips.docx");
 
 export default function Resume() {
   return (
@@ -53,6 +50,11 @@ export default function Resume() {
             href="http://codewars.com/users/alexphillips"
           >
             http://codewars.com/users/alexphillips
+          </a>
+          <br />
+
+          <a className="left" target="_blank" href="http://alexcphillips.com">
+            http://alexcphillips.com
           </a>
           <div style={{ marginBottom: "1rem" }} />
         </div>
