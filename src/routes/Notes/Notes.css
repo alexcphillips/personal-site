@@ -27,3 +27,17 @@
   min-width: 0;
   width: 100%;
 }
+
+.top-links {
+  width: 100%;
+}
+.top-links a {
+  margin: 5px;
+}
+
+@media screen {
+  #sidebar-wrapper {
+    width: 100%;
+    display: block;
+  }
+}

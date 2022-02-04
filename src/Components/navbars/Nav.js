@@ -43,12 +43,12 @@ export default function AppNav() {
         },
         text: "Contact me"
       },
-      {
-        linkAttributes: {
-          to: "/resume"
-        },
-        text: "Resume"
-      },
+      // {
+      //   linkAttributes: {
+      //     to: "/resume"
+      //   },
+      //   text: "Resume"
+      // },
       {
         linkAttributes: {
           to: "/notes"

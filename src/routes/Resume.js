@@ -14,14 +14,15 @@ export default function Resume() {
         <div className="inner-container">
           <div className="spacer-small" />
           <h4 className="heading">Node.js Developer</h4>
-          {/* <div style={{ marginBottom: "1rem" }} /> */}
-          I've been working as a Node.js Developer at ANI Consulting since
-          August of 2019, building microservices and REST APIs.
+          {/* <div style={{ marginBottom: "1rem" }} /> */}I started work as a
+          Node.js Developer at ANI Consulting on August of 2019. I build
+          microservices, REST APIs, and frontends.
           <div className="section">
             <div className="section-head left">SKILLS</div>
             <ul className="left">
               <li>Building Node.js applications</li>
-              <li>Building REST APIs</li>
+              <li>ES6</li>
+              <li>React and JSX</li>
               <li>Utilizing MongoDB</li>
               <li>Writing Jest tests</li>
               <li>Debugging</li>
@@ -63,7 +64,7 @@ export default function Resume() {
           <div className="section">
             <div className="section-head left">WORK HISTORY</div>
             <div className="role left">
-              BACKEND DEVELOPER - ANI CONSULTING • 09/2019 - CURRENT
+              FULLSTACK DEVELOPER - ANI CONSULTING • 09/2019 - CURRENT
             </div>
             <ul className="left">
               <li>Built REST APIs with Express server</li>

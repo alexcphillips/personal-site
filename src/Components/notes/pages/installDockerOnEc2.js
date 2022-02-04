@@ -7,13 +7,8 @@ const installDockerOnEc2 = (
     <div className="title">Installing Docker on an AWS EC2</div>
     This guide assumes you have already launched an EC2 Instance, have it's
     keys, and can SSH into it. If not, see my guide on{" "}
-    <a href="/launching-an-aws-ec2-instance" target="_blank">
-      Launching an EC2 Instance
-    </a>{" "}
-    or{" "}
-    <a href="/ssh-into-an-aws-ec2-instance" target="_blank">
-      SSH into an AWS EC2 Instance
-    </a>
+    <a href="/notes/launching-an-aws-ec2">Launching an EC2 Instance</a> or{" "}
+    <a href="/notes/ssh-into-an-aws-ec2">SSH into an AWS EC2 Instance</a>
     <div className="small-spacer" />
     SSH Inside your EC2 Instance (<code>ssh -i ec2-user@ElasticIP</code>), then
     run

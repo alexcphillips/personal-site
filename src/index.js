@@ -8,13 +8,14 @@ import Nav from "./Components/navbars/Nav";
 import Contact from "./routes/Contact";
 import Notes from "./routes/Notes/Notes";
 import Note from "./routes/Notes/Note";
+import AboutNotes from "./routes/AboutNotes.js";
 // import NotesHome from "./routes/NotesHome";
 
 // import Excel from "./routes/Excel"
 // import Family from "./routes/Family";
 // import Login from "./routes/Login";
 // import Game from "./routes/game/Game";
-import Resume from "./routes/Resume";
+// import Resume from "./routes/Resume";
 
 import { Provider } from "react-redux";
 import store from "./store";
@@ -29,9 +30,9 @@ render(
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="contact-me" element={<Contact />} />
-          <Route path="resume" element={<Resume />} />
+          {/* <Route path="resume" element={<Resume />} /> */}
           <Route path="notes" element={<Notes />}>
-            <Route index element={<p>hi</p>} />
+            <Route index element={<AboutNotes />} />
 
             <Route path=":name" element={<Note />} />
           </Route>
