@@ -11,6 +11,17 @@ const installDockerComposeOnEc2 = (
       Installing Docker Compose on an EC2 Instance
     </a>
     <div className="small-spacer" />
+    <div className="box">
+      Install docker-compose
+      <code>
+        sudo curl -L
+        "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname
+        -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+      </code>{" "}
+      <br />
+      then, give add excutable permissions with{" "}
+      <code>sudo chmod +x /usr/local/bin/docker-compose</code>
+    </div>
   </>
 );
 

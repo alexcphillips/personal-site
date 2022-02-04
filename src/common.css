@@ -43,6 +43,14 @@
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
+.link-text {
+  text-decoration: none;
+}
+
 @media screen and (min-width: 0px) and (max-width: 1024px) {
   .download-link {
     display: none;

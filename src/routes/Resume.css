@@ -27,3 +27,9 @@
   letter-spacing: 0.04em;
   font-weight: 400;
 }
+
+.inner-container {
+  width: 70%;
+  float: left;
+  margin-left: 5%;
+}
