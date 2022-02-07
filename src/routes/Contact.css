@@ -1,6 +1,8 @@
 #phone-number-and-email {
   letter-spacing: 0.06em;
   padding-bottom: 8%;
+  color: black;
+  width: fit-content;
 }
 
 #links {

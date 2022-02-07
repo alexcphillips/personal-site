@@ -51,6 +51,17 @@ a {
   text-decoration: none;
 }
 
+p code,
+li code {
+  font-family: var(--font-family-code);
+  font-size: 0.875rem;
+  font-weight: 400;
+  background-color: var(--inline-code-bg-color);
+  color: var(--inline-code-color);
+  padding: 0.25em 0.5em 0.25em;
+  border-radius: 3px;
+}
+
 @media screen and (min-width: 0px) and (max-width: 1024px) {
   .download-link {
     display: none;

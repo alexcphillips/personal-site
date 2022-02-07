@@ -11,12 +11,12 @@ export default function Home() {
           <div className="medium-spacer" />
           <h3 id="greeting">Hi, I'm Alex</h3>
           <div className="tiny-spacer" />
-          <h6 className="heading text-center">I'm a Node.js Developer.</h6>
+          <h6 className="heading text-center">I'm a Fullstack Developer.</h6>
           <div className="medium-spacer" />
-          I write code in Node.js professionally and started over 2 years ago,
-          and I began coding with my father at a young age. I enjoy solving new
-          challenges and growing as a developer. I put in the time to my craft
-          to overcome obstacles and exceed all expectations.
+          I write code in Node.js and React professionally and started over 2
+          years ago, and I began coding with my father at a young age. I enjoy
+          solving new challenges and growing as a developer. I put in the time
+          to my craft to overcome obstacles and exceed all expectations.
           <div className="medium-spacer" />
           <h6 className="heading">My Favorite Projects</h6>
           <div className="small-spacer" />
