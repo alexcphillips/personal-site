@@ -17,7 +17,14 @@ export default function CopyButton({ text }) {
 
   return (
     <>
-      <button style={{ border: "1px solid black" }} onClick={copy}>
+      <button
+        style={{
+          padding: 0,
+          border: 0,
+          backgroundColor: "inherit"
+        }}
+        onClick={copy}
+      >
         {state}
       </button>
     </>

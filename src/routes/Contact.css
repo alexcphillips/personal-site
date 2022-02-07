@@ -1,10 +1,32 @@
-#phone-number-and-email {
-  letter-spacing: 0.06em;
-  padding-bottom: 8%;
-  color: black;
-  width: fit-content;
+.main-container {
+  height: 100%;
+  width: 60%;
+  margin: auto;
 }
 
-#links {
-  letter-spacing: 0.06em;
+.contact-content,
+.link-content {
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+
+.contact-content a,
+.link-content a {
+  text-decoration: none;
+  color: black;
+}
+
+.contact-content a :hover,
+.link-content :hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  .main-container {
+    width: 90%;
+  }
+
+  .footer {
+    padding-bottom: 15%;
+  }
 }
