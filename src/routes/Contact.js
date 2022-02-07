@@ -29,7 +29,7 @@ export default function Contact() {
       isLink: true
     },
     {
-      text: "https://alexcphillips.com",
+      text: "http://alexcphillips.com",
       isLink: true
     }
   ];
