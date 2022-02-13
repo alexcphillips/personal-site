@@ -5,10 +5,9 @@ export default function AboutNotes() {
   return (
     <>
       <div className="small-spacer" />
-      <h3>
-        Writing about issues and errors and how to overcome them. Go ahead,
-        click a link.
-      </h3>
+      <h4 className="text-center">
+        Fixes and solutions to issues and errors. Go ahead, click a link.
+      </h4>
     </>
   );
 }
