@@ -1,11 +1,15 @@
 const mongo = require("./mongo");
 const { app } = require("./app");
 const path = require("path");
+const https = require("https");
+const fs = require("fs");
 
 const { seedFamilyImages } = require("./scripts/dbSeed");
 
+let isDev = process.env.NODE_ENV === "dev";
+
 let envPath = null;
-if (process.env.NODE_ENV === "dev") {
+if (isDev) {
   envPath = "../.env.dev";
 } else {
   envPath = "../.env";
@@ -18,7 +22,13 @@ require("dotenv").config({ path: pathUsed });
   await mongo.connect(process.env.MONGO_URI);
   // await seedFamilyImages();
 
-  app.listen(process.env.PORT, () => {
-    console.log("Server started SUCCESSFULLY on port", process.env.PORT);
-  });
+  let opts = {
+    key: fs.readFileSync("./sslkey.pem"),
+    cert: fs.readFileSync("./sslcert.pem"),
+    passphrase: process.env.passphrase
+  };
+
+  if (isDev) opts = {};
+
+  https.createServer(opts, app).listen(process.env.PORT);
 })();

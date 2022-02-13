@@ -7,11 +7,15 @@ export default function Home() {
   return (
     <Container>
       <div className="page">
+        <h3 id="greeting">
+          Hi, I'm Alex
+          <br />
+        </h3>
+        <h6 className="heading text-center">I'm a Fullstack Developer.</h6>
+
         <div className="main-container">
           <div className="medium-spacer" />
-          <h3 id="greeting">Hi, I'm Alex</h3>
           <div className="tiny-spacer" />
-          <h6 className="heading text-center">I'm a Fullstack Developer.</h6>
           <div className="medium-spacer" />
           I write code in Node.js and React professionally and started over 2
           years ago, and I began coding with my father at a young age. I enjoy
