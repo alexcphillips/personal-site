@@ -2,7 +2,7 @@ const mongo = require("./mongo");
 const { app } = require("./app");
 const path = require("path");
 const https = require("https");
-const fs = require("fs");
+// const fs = require("fs");
 
 const { seedFamilyImages } = require("./scripts/dbSeed");
 
@@ -22,14 +22,24 @@ require("dotenv").config({ path: pathUsed });
   await mongo.connect(process.env.MONGO_URI);
   // await seedFamilyImages();
 
-  let opts = {
-    key: fs.readFileSync("./sslkey.pem"),
-    cert: fs.readFileSync("./sslcert.pem"),
-    passphrase: process.env.SSL_PASSPHRASE
-  };
+  // let opts = {
+  //   key: fs.readFileSync("./ssl.key"),
+  //   cert: fs.readFileSync("./ssl.cert"),
+  //   passphrase: process.env.SSL_PASSPHRASE
+  // };
 
-  if (!(opts.key && opts.cert && opts.passphrase)) {
-    throw new Error("Missing key, cert, or passphrase");
-  }
-  https.createServer(opts, app).listen(process.env.PORT);
+  // console.log(opts);
+
+  // if (!(opts.key && opts.cert && opts.passphrase)) {
+  //   if (isDev) {
+  //     console.log(opts.key);
+  //     console.log(opts.cert);
+  //     console.log(opts.passphrase);
+  //   }
+  //   throw new Error("Missing key, cert, or passphrase");
+  // }
+
+  https.createServer(opts, app).listen(process.env.PORT, () => {
+    console.log("Listening on port", process.env.PORT);
+  });
 })();
