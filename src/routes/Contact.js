@@ -1,7 +1,7 @@
 import "../common.css";
 import "./Contact.css";
 
-import { useDeviceDetect } from "../utilities";
+// import { useDeviceDetect } from "../utilities";
 
 import CopyButton from "../Components/copyButton";
 
