@@ -25,10 +25,11 @@ require("dotenv").config({ path: pathUsed });
   let opts = {
     key: fs.readFileSync("./sslkey.pem"),
     cert: fs.readFileSync("./sslcert.pem"),
-    passphrase: process.env.passphrase
+    passphrase: process.env.SSL_PASSPHRASE
   };
 
-  if (isDev) opts = {};
-
+  if (!(opts.key && opts.cert && opts.passphrase)) {
+    throw new Error("Missing key, cert, or passphrase");
+  }
   https.createServer(opts, app).listen(process.env.PORT);
 })();
