@@ -37,58 +37,60 @@ export default function Contact() {
   return (
     <div className="page">
       <div className="main-container">
-        <div className="small-spacer" />
-        <div className="heading">Contact Me</div>
-        <div className="tiny-spacer" />
-        <div className="section">
-          {contactInfo.map(({ text, isLink }) => {
-            return (
-              <div className="contact-content" key={text}>
-                {(!isLink && (
-                  <>
-                    {/* <CopyButton text={text} /> {text} <br /> */}
-                    {text} <br />
-                  </>
-                )) || (
-                  <>
-                    <div className="link-content" key={text}>
-                      {/* <CopyButton text={text} />{" "} */}
-                      <a href={text} target="_blank" rel="noreferrer">
-                        {text}
-                      </a>
-                      <br />
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
-        </div>
-        <div className="small-spacer" />
-        <div className="heading">Other</div>
-        <div className="tiny-spacer" />
-        <div className="section">
-          {links.map(({ text, isLink }) => {
-            return (
-              <div className="contact-content" key={text}>
-                {(!isLink && (
-                  <>
-                    <CopyButton text={text} /> {text} <br />
-                  </>
-                )) || (
-                  <>
-                    <div className="link-content" key={text}>
-                      {/* <CopyButton text={text} />{" "} */}
-                      <a href={text} target="_blank" rel="noreferrer">
-                        {text}
-                      </a>
-                      <br />
-                    </div>
-                  </>
-                )}
-              </div>
-            );
-          })}
+        <div className="left-align-container">
+          <div className="small-spacer" />
+          <div className="heading">Contact Me</div>
+          <div className="tiny-spacer" />
+          <div className="section">
+            {contactInfo.map(({ text, isLink }) => {
+              return (
+                <div className="contact-content" key={text}>
+                  {(!isLink && (
+                    <>
+                      {/* <CopyButton text={text} /> {text} <br /> */}
+                      {text} <br />
+                    </>
+                  )) || (
+                    <>
+                      <div className="link-content" key={text}>
+                        {/* <CopyButton text={text} />{" "} */}
+                        <a href={text} target="_blank" rel="noreferrer">
+                          {text}
+                        </a>
+                        <br />
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <div className="small-spacer" />
+          <div className="heading">Other</div>
+          <div className="tiny-spacer" />
+          <div className="section">
+            {links.map(({ text, isLink }) => {
+              return (
+                <div className="contact-content" key={text}>
+                  {(!isLink && (
+                    <>
+                      <CopyButton text={text} /> {text} <br />
+                    </>
+                  )) || (
+                    <>
+                      <div className="link-content" key={text}>
+                        {/* <CopyButton text={text} />{" "} */}
+                        <a href={text} target="_blank" rel="noreferrer">
+                          {text}
+                        </a>
+                        <br />
+                      </div>
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
