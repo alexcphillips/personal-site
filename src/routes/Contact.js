@@ -46,12 +46,13 @@ export default function Contact() {
               <div className="contact-content" key={text}>
                 {(!isLink && (
                   <>
-                    <CopyButton text={text} /> {text} <br />
+                    {/* <CopyButton text={text} /> {text} <br /> */}
+                    {text} <br />
                   </>
                 )) || (
                   <>
                     <div className="link-content" key={text}>
-                      <CopyButton text={text} />{" "}
+                      {/* <CopyButton text={text} />{" "} */}
                       <a href={text} target="_blank" rel="noreferrer">
                         {text}
                       </a>
@@ -77,7 +78,7 @@ export default function Contact() {
                 )) || (
                   <>
                     <div className="link-content" key={text}>
-                      <CopyButton text={text} />{" "}
+                      {/* <CopyButton text={text} />{" "} */}
                       <a href={text} target="_blank" rel="noreferrer">
                         {text}
                       </a>
