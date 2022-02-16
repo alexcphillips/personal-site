@@ -39,7 +39,7 @@ require("dotenv").config({ path: pathUsed });
   //   throw new Error("Missing key, cert, or passphrase");
   // }
 
-  https.createServer(opts, app).listen(process.env.PORT, () => {
+  https.createServer(app).listen(process.env.PORT, () => {
     console.log("Listening on port", process.env.PORT);
   });
 })();
