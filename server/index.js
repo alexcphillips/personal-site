@@ -1,7 +1,7 @@
 const mongo = require("./mongo");
 const { app } = require("./app");
 const path = require("path");
-const https = require("https");
+// const https = require("https");
 // const fs = require("fs");
 
 const { seedFamilyImages } = require("./scripts/dbSeed");
@@ -39,7 +39,11 @@ require("dotenv").config({ path: pathUsed });
   //   throw new Error("Missing key, cert, or passphrase");
   // }
 
-  https.createServer(app).listen(process.env.PORT, () => {
-    console.log("Listening on port", process.env.PORT);
+  // https.createServer(app).listen(process.env.PORT, () => {
+  //   console.log("Listening on port", process.env.PORT);
+  // });
+
+  app.listen(process.env.PORT, () => {
+    console.log("Server started SUCCESSFULLY");
   });
 })();
