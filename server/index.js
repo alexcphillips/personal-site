@@ -10,40 +10,40 @@ let isDev = process.env.NODE_ENV === "dev";
 
 let envPath = null;
 if (isDev) {
-  envPath = "../.env.dev";
+    envPath = "../.env.dev";
 } else {
-  envPath = "../.env";
+    envPath = "../.env";
 }
 
 const pathUsed = path.join(__dirname, envPath);
 require("dotenv").config({ path: pathUsed });
 
 (async () => {
-  await mongo.connect(process.env.MONGO_URI);
-  // await seedFamilyImages();
+    // await mongo.connect(process.env.MONGO_URI);
+    // await seedFamilyImages();
 
-  // let opts = {
-  //   key: fs.readFileSync("./ssl.key"),
-  //   cert: fs.readFileSync("./ssl.cert"),
-  //   passphrase: process.env.SSL_PASSPHRASE
-  // };
+    // let opts = {
+    //   key: fs.readFileSync("./ssl.key"),
+    //   cert: fs.readFileSync("./ssl.cert"),
+    //   passphrase: process.env.SSL_PASSPHRASE
+    // };
 
-  // console.log(opts);
+    // console.log(opts);
 
-  // if (!(opts.key && opts.cert && opts.passphrase)) {
-  //   if (isDev) {
-  //     console.log(opts.key);
-  //     console.log(opts.cert);
-  //     console.log(opts.passphrase);
-  //   }
-  //   throw new Error("Missing key, cert, or passphrase");
-  // }
+    // if (!(opts.key && opts.cert && opts.passphrase)) {
+    //   if (isDev) {
+    //     console.log(opts.key);
+    //     console.log(opts.cert);
+    //     console.log(opts.passphrase);
+    //   }
+    //   throw new Error("Missing key, cert, or passphrase");
+    // }
 
-  // https.createServer(app).listen(process.env.PORT, () => {
-  //   console.log("Listening on port", process.env.PORT);
-  // });
+    // https.createServer(app).listen(process.env.PORT, () => {
+    //   console.log("Listening on port", process.env.PORT);
+    // });
 
-  app.listen(process.env.PORT, () => {
-    console.log("Server started SUCCESSFULLY");
-  });
+    app.listen(process.env.API_PORT, () => {
+        console.log("Server started SUCCESSFULLY", process.env.API_PORT);
+    });
 })();
