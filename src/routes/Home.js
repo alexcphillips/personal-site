@@ -33,9 +33,9 @@ export default function Home() {
                     <div className="heading">• NM microservices</div>
                     <div className="miniscule-spacer" />
                     My current project is a set of microservices that generate
-                    fake JSON data for testing purposes. This project will save
-                    other teams hours of time, as they get this data via a
-                    legacy application that has 25 screens of required fields.
+                    fake data. This project will save other teams hours of time,
+                    as they get this data via a legacy application that has 25
+                    screens of required fields.
                     <br />
                     <br />
                     The production of test data begins when the services are
