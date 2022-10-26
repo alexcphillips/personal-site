@@ -9,8 +9,8 @@ import ContactMe from "./pages/Contact";
 import Notes from "./pages/Notes/Notes";
 import Note from "./pages/Notes/Note";
 import AboutNotes from "./pages/AboutNotes.js";
-import Tools from "./pages/Tools/Tools";
-import Tool from "./pages/Tools/Tool";
+// import Tools from "./pages/Tools/Tools";
+// import Tool from "./pages/Tools/Tool";
 // import Login from "./pages/Login";
 // import Resume from "./pages/Resume";
 

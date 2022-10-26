@@ -1,5 +1,3 @@
-import { useParams } from "react-router-dom";
-
 const tools = [];
 export default function Tool() {
   const { name } = useParams();
