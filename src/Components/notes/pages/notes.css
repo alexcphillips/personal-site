@@ -11,9 +11,3 @@ code {
   padding: 1px;
   border: 1px solid darkgray;
 }
-
-.box {
-  padding: 1%;
-  border: 1px solid black;
-  width: fit-content;
-}

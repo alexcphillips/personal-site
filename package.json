@@ -1,59 +1,59 @@
 {
-    "name": "personal-site",
-    "version": "0.1.0",
-    "dependencies": {
-        "aws-sdk": "^2.1058.0",
-        "axios": "^0.24.0",
-        "bcryptjs": "^2.4.3",
-        "bootstrap": "^5.1.3",
-        "concurrently": "^6.5.1",
-        "cors": "^2.8.5",
-        "dotenv": "^10.0.0",
-        "express": "^4.17.2",
-        "file-saver": "^2.0.5",
-        "jsonwebtoken": "^8.5.1",
-        "mongodb": "^4.2.2",
-        "passport": "^0.6.0",
-        "xlsx": "^0.17.5"
-    },
-    "devDependencies": {
-        "@reduxjs/toolkit": "^1.7.1",
-        "@testing-library/jest-dom": "^5.16.1",
-        "@testing-library/react": "^12.1.2",
-        "@testing-library/user-event": "^13.5.0",
-        "react": "^17.0.2",
-        "react-bootstrap": "^2.1.1",
-        "react-dom": "^17.0.2",
-        "react-redux": "^7.2.6",
-        "react-router-dom": "^6.2.1",
-        "react-scripts": "^5.0.1"
-    },
-    "scripts": {
-        "dev": "BROWSER=none NODE_ENV=dev concurrently \"node server\" \"react-scripts start\"",
-        "server": "NODE_ENV=dev nodemon server",
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "docker": "docker build -t site . && docker-compose up -d"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
-    "proxy": "http://localhost:3001",
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    }
+  "name": "personal-site",
+  "version": "0.1.0",
+  "dependencies": {
+    "aws-sdk": "^2.1058.0",
+    "axios": "^0.24.0",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^5.1.3",
+    "concurrently": "^6.5.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "file-saver": "^2.0.5",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.2.2",
+    "passport": "^0.6.0",
+    "xlsx": "^0.17.5"
+  },
+  "devDependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.1"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=dev concurrently \"node server\" \"react-scripts start\"",
+    "server": "NODE_ENV=dev nodemon server",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "docker": "docker build -t site . && docker-compose up -d"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "proxy": "http://localhost:3001",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

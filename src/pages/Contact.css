@@ -7,19 +7,31 @@
 
 .left-align-container {
   text-align: left;
+  display: block;
+}
+
+.contact-content {
+  display: block;
+  letter-spacing: 0.08em;
+  overflow: wrap;
+}
+
+.link-content {
+  letter-spacing: 0.08em;
+  word-wrap: break-all;
+}
+
+.text-content {
+  word-break: break-all;
   display: inline-block;
 }
 
-.contact-content,
-.link-content {
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-}
-
 .contact-content a,
-.link-content a {
+.link-content a,
+.text-content {
   text-decoration: none;
   color: black;
+  word-break: break-all;
 }
 
 .contact-content a :hover,

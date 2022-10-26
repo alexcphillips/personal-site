@@ -1,9 +1,9 @@
 import "../common.css";
-import "./Home.css";
+import "./AboutMe.css";
 
 import Container from "react-bootstrap/Container";
 
-export default function Home() {
+export default function AboutMe() {
     return (
         <Container>
             <div className="page">
